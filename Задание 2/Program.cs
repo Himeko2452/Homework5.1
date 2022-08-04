@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Задание_2
 {
-    /// <summary>
+   /// <summary>
         /// Метод разделяющий слова в предложении
         /// </summary>
         /// <param name="Text">Строковая переменная, которую нужно разделить в массив</param>
@@ -16,10 +16,7 @@ namespace Задание_2
         static string[] SplitWords(string Text)
         {
             string[] arrayWord = Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach (var e in arrayWord)
-            {
-                Console.WriteLine(e);
-            }              
+                        
             return arrayWord;
         }
         /// <summary>
@@ -33,6 +30,10 @@ namespace Задание_2
         static string ReverseWords(string Text)
         {
             string[] arrayWord = SplitWords(Text);
+            foreach (var e in arrayWord)
+            {
+                Console.WriteLine(e);
+            }
             Array.Reverse(arrayWord);
             string newString = string.Join(" ", arrayWord);
 
